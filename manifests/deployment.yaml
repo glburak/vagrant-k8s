@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getting-started
+spec:
+  selector:
+    matchLabels:
+      run: getting-started
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: getting-started
+    spec:
+      containers:
+      - name: getting-started
+        image: docker/getting-started
+        ports:
+        - containerPort: 80
