@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'cd ci-cd'
-                sh 'docker build -t deneme .'
+                sh 'docker build -t deneme ci-cd/'
             }
         }
     }
