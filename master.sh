@@ -20,4 +20,4 @@ kubeadm token create --print-join-command > /joincluster.sh
 
 #jenkinsfile trigger
 echo "[TASK 5] Jenkins job trigger pipeline"
-curl -u burak:1165d15401cd3010f17189297b743ad633 http://127.0.0.1:8080/job/getting-started/build?token=My-token
+curl -u burak:1165d15401cd3010f17189297b743ad633 http://192.168.1.32:8080/job/getting-started/build?token=My-token
