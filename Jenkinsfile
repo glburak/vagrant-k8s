@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ls -l'
+                sh 'cd ci-cd'
+                sh 'docker build -t deneme .'
             }
         }
     }
