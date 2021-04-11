@@ -8,11 +8,11 @@ pipeline {
                 sh 'docker build -t cyberburak1/getting-started:2.0 ci-cd/'
             }
         }
-       stage('Push image') {
-       docker.withRegistry('https://registry.hub.docker.com/cyberburak1/getting-started', 'dockerhub') {            
-       app.push("${env.BUILD_NUMBER}")            
-       app.push("latest")        
-              }    
-           }
+        stage('publish') {
+            steps {
+                sh 'ls -l'
+                sh 'docker push cyberburak1/getting-started:2.0'
+            }
+        }
     }
 }
