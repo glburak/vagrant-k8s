@@ -17,3 +17,7 @@ su - vagrant -c "kubectl create -f https://docs.projectcalico.org/v3.15/manifest
 # Generate Cluster join command
 echo "[TASK 4] Generate and save cluster join command to /joincluster.sh"
 kubeadm token create --print-join-command > /joincluster.sh
+
+#jenkinsfile trigger
+echo "[TASK 5] Jenkins job trigger pipeline"
+curl -u burak:1165d15401cd3010f17189297b743ad633 http://127.0.0.1:8080/job/getting-started/build?token=My-token
