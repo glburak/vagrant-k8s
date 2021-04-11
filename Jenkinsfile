@@ -1,12 +1,11 @@
 pipeline {
-agent any
-  stages {
-    stage ('Building') {
-      steps {
-        sh '''
-        docker build -t deneme ." 
-        '''
-      }
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo merhaba'
+            }
+        }
     }
-  }
 }
