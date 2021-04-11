@@ -4,8 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd ci-cd'
-                sh 'docker build -t deneme ci-cd/'
+                sh 'ls -l'
+                sh 'docker build -t cyberburak1/getting-started:2.0 ci-cd/'
+            }
+        }
+        stage('push regisrty') {
+            steps {
+                
+                sh 'docker push cyberburak1/getting-started:2.0'
             }
         }
     }
