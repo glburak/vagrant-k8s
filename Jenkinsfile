@@ -11,7 +11,7 @@ pipeline {
         stage('publish') {
             steps {
                
-                sh 'docker push cyberburak1/getting-started:2.0'
+                sh 'docker push cyberburak1/getting-started:3.0'
             }
         }
         stage('kubernetes-deploy') {
