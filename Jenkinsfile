@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls -l'
-                sh 'docker build -t cyberburak1/getting-started:2.0 ci-cd/'
+                sh 'docker build -t cyberburak1/getting-started:3.0 ci-cd/'
             }
         }
         stage('publish') {
