@@ -14,12 +14,6 @@ pipeline {
                 sh 'docker push cyberburak1/getting-started:2.0'
             }
         }
-        stage('kubernets-deploy') {
-            steps {
-                
-                sh 'kubectl create -f manifests/deployment.yaml'
-                sh 'kubectl create -f manifests/service.yaml'
-            }
-        }
+
     }
 }
